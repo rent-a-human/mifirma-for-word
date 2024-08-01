@@ -9,7 +9,7 @@
   },
   "scripts": {
     "build": "webpack -p --mode production --https false",
-    "build:dev": "webpack --mode development --https false",
+    "build:dev": "webpack --mode development",
     "configure-sso": "office-addin-sso configure manifest.xml",
     "lint": "office-addin-lint check",
     "lint:fix": "office-addin-lint fix",
