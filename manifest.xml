@@ -5,7 +5,7 @@
   <ProviderName>Gravity™</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Gravity™"/>
-  <Description DefaultValue="Gestiona y firma electrónicamente tus documentos más importantes, desde cualquier lugar de forma ágil, segura y con validez jurídica y probatoria"/>
+  <Description DefaultValue="Cloud Based Financial Close Management Solution"/>
   <IconUrl DefaultValue="https://i.ibb.co/FsyT1QF/graviton.png"/>
   <HighResolutionIconUrl DefaultValue="https://i.ibb.co/FsyT1QF/graviton.png"/>
   <SupportUrl DefaultValue="https://frosty-archimedes-0b2d91.netlify.app/help"/>
