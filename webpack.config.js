@@ -1,4 +1,4 @@
-const devCerts = require("office-addin-dev-certs");
+//const devCerts = require("office-addin-dev-certs");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -7,7 +7,7 @@ const fs = require("fs");
 const webpack = require("webpack");
 
 const urlDev="https://localhost:3000/";
-const urlProd="http://localhost:8080/"; // CHANGE THIS TO YOUR PRODUCTION DEPLOYMENT LOCATION
+const urlProd="https://frosty-archimedes-0b2d91.netlify.app/"; // CHANGE THIS TO YOUR PRODUCTION DEPLOYMENT LOCATION
 
 module.exports = async (env, options) => {
     const dev = options.mode === "development";
@@ -179,7 +179,7 @@ module.exports = async (env, options) => {
           headers: {
             "Access-Control-Allow-Origin": "*"
           },      
-          https: (options.https !== undefined) ? options.https : await devCerts.getHttpsServerOptions(),
+          https: options.https,
           port: process.env.npm_package_config_dev_server_port || 3000
         }
       };
