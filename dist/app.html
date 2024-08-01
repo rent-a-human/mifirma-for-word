@@ -1,1 +1,135 @@
-<!doctype html><html><head><meta charset="UTF-8"/><meta http-equiv="X-UA-Compatible" content="IE=Edge"/><meta name="viewport" content="width=device-width,initial-scale=1"><title>MiFirma para Word</title><meta name="msapplication-TileColor" content="#004453"><meta name="theme-color" content="#004453"><meta name="msapplication-TileImage" content="../../assets/img/favicon/favicon-128x128.ico"><link rel="icon" type="image/x-icon" sizes="128x128" href="../../assets/img/favicon/favicon-128x128.ico"><link rel="icon" type="image/x-icon" sizes="64x64" href="../../assets/img/favicon/favicon-64x64.ico"><link rel="icon" type="image/x-icon" sizes="32x32" href="../../assets/img/favicon/favicon-32x32.ico"><link rel="icon" type="image/x-icon" sizes="48x48" href="../../assets/img/favicon/favicon-48x48.ico"><link rel="icon" type="image/x-icon" sizes="16x16" href="../../assets/img/favicon/favicon-16x16.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"><link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet"><script src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script><link href="app.css" rel="stylesheet"/></head><body><div class="cargador-screen" id="load-banner"><div class="cargador-screen-icon"></div></div><div class="MF-ribbon"></div><header class="MF-header" id="header"><img src="assets/img/logo-mi-firma.svg" alt="MiFirma" title="MiFirma"/></header><section id="sideload-msg" class="ms-welcome__main"><h2 class="ms-font-xl">Por favor carga el complemento mifirma-addin para una mejor experiencia.</h2></section><main id="app-body" style="display:none"><div class="MF-content"><p class="firstScreen" id="welcome-message">Ingresa tu correo electrónico para acceder a la plataforma.</p><p></p><form id="login-form"><div><div class="MF-row secondScreen">Bienvenido, <span id="customerName"></span></div><div class="MF-row firstScreen"><label for="email" id="email-field">Correo: <input class="MF-input" type="email" id="email" required placeholder="Correo Electrónico"></label></div><div class="MF-row thirdScreen"><div class="MF-div thirdScreen"><label for="firstName">Nombre <input name="firstName" id="firstName" class="MF-input" placeholder="Nombre"></label></div><div class="MF-div thirdScreen"><label for="lastName">Apellido:</label> <input name="lastName" id="lastName" class="MF-input" placeholder="Apellido"></div><div class="MF-div thirdScreen"><span>Celular:</span> <input name="customerMobile" id="customerMobile" class="MF-input" placeholder="Celular"></div><div class="MF-div thirdScreen" id="pass1"><label for="password1">Nueva Contraseña <input type="password" name="password1" id="password1" class="MF-input" placeholder="Nueva Contraseña"> <i class="far fa-eye" id="togglePassword1"></i></label></div><div class="MF-div thirdScreen" id="pass2"><label for="password2">Confirmar Contraseña <input type="password" name="password2" id="password2" class="MF-input" placeholder="Confirmar Contraseña"> <i class="far fa-eye" id="togglePassword2"></i></label></div><div class="MF-div thirdScreen"><input type="checkbox" id="datos" name="datos"> <label for="datos">Autorizo el tratamiento de mis datos personales</label></div><div class="MF-div thirdScreen"><input type="checkbox" id="terms" name="terms"> <label for="terms">Acepto los términos y condiciones</label></div></div><div class="MF-div"></div><div class="MF-row secondScreen"><label id="password-field"><input type="password" name="password" id="password" class="MF-input" placeholder="Contraseña"> <i class="far fa-eye" id="togglePassword"></i></label></div><div class="MF-div firstScreen"><span id="user-error" class="MF-error">Usuario no encontrado</span></div><div class="MF-div secondScreen"><span id="password-error" class="MF-error">Contraseña incorrecta</span></div><div class="MF-small secondScreen"><a href="https://mifirmapru.olimpiait.com:6570/login/reset/password/pin">¿Has olvidado tu contraseña?</a></div><div class="MF-row MF-xsmall secondScreen"><input type="checkbox" id="rememberMe" name="rememberMe"> <label for="rememberMe">Mantener la sesión iniciada</label></div><div class="MF-row"><button id="submit-btn" class="MF-button" type="submit">Siguiente</button></div></div></form><p></p><p></p></div><div id="otp-modal" class="MF-modal"><div class="MF-inner" id="modal-content"><form id="otp-form"><label class="MF-center"><span>Por favor ingresa el código de seguridad enviado a tu número de celular terminado en <span id="phoneUs"></span></span></label><div id="otp-error" class="MF-center MF-error">FATAL ERROR!</div><div class="MF-center"><input class="MF-input-big" id="opt-input" type="number" maxlength="6" required></div><div class="MF-center"><a id="resend-code">Reenviar código</a></div><div class="MF-center"><button class="MF-button2" type="submit">Finalizar</button></div></form></div></div><div class="user-picture-box"></div></main><script src="polyfill.js"></script><script src="app.js"></script></body></html>
+<!-- Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT License. -->
+<!-- This file shows how to design a first-run page that provides a welcome screen to the user about the features of the add-in. -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gravity™</title>
+    <meta name="msapplication-TileColor" content="#004453">
+    <meta name="theme-color" content="#004453">
+    <meta name="msapplication-TileImage" content="../../assets/img/favicon/favicon-128x128.ico">
+    
+    <!--<script src="./attention.js"></script>-->
+    <link rel="icon" type="image/x-icon" sizes="128x128" href="../../assets/img/favicon/favicon-128x128.ico">
+    <link rel="icon" type="image/x-icon" sizes="64x64" href="../../assets/img/favicon/favicon-64x64.ico">
+    <link rel="icon" type="image/x-icon" sizes="32x32" href="../../assets/img/favicon/favicon-32x32.ico">
+    <link rel="icon" type="image/x-icon" sizes="48x48" href="../../assets/img/favicon/favicon-48x48.ico">
+    <link rel="icon" type="image/x-icon" sizes="16x16" href="../../assets/img/favicon/favicon-16x16.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap"
+    rel="stylesheet"> 
+    <!-- Office JavaScript API -->
+    <script type="text/javascript" src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+
+    <!-- Template styles -->
+    <link href="app.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <div class="cargador-screen" id="load-banner">
+        <div class="cargador-screen-icon"></div>
+    </div>
+    <div class="MF-ribbon"></div>
+    <header class="MF-header" id="header">
+        <img src="assets/img/logo-mi-firma.svg" alt="MiFirma" title="MiFirma" />
+    </header>
+    <section id="sideload-msg" class="ms-welcome__main">
+        <h2 class="ms-font-xl">Por favor carga el complemento mifirma-addin para una mejor experiencia.</h2>
+    </section>
+    <main id="app-body" style="display: none;">   
+        <div class="MF-content">
+            <p class="firstScreen" id="welcome-message">Ingresa tu correo electrónico para acceder a la plataforma. <P>
+            <form id="login-form">
+                <div>  
+                    <div class="MF-row secondScreen">Bienvenido, <span id="customerName"></span></div>                     
+                    <div class="MF-row firstScreen">
+                        <label for="email" id="email-field">Correo:
+                            <!--<span>Correo</span>-->
+                            <input class="MF-input" type="email" id="email" required placeholder="Correo Electrónico">
+                        </label>
+                    </div>
+                    
+                    <div class="MF-row thirdScreen">
+                        <div class="MF-div thirdScreen">
+                        <label for="firstName">Nombre
+                            <input type="text" name="firstName" id="firstName" class="MF-input" placeholder="Nombre">
+                        </label>
+                        </div>
+                        <div class="MF-div thirdScreen">
+                            <label for="lastName">Apellido:</label>
+                            <input type="text" name="lastName" id="lastName" class="MF-input" placeholder="Apellido">
+                        </div>
+                        <div class="MF-div thirdScreen">
+                            <span>Celular:</span>
+                            <input type="text" name="customerMobile" id="customerMobile" class="MF-input" placeholder="Celular">                                                
+                        </div>
+                        <div class="MF-div thirdScreen" id='pass1'>
+                            <label for="password1">Nueva Contraseña
+                                <input type="password" name="password1" id="password1" class="MF-input" placeholder="Nueva Contraseña">
+                                <i class="far fa-eye" id="togglePassword1"></i>
+                            </label>
+                        </div>
+                        <div class="MF-div thirdScreen" id='pass2'>
+                            <label for="password2">Confirmar Contraseña
+                                <input type="password" name="password2" id="password2" class="MF-input" placeholder="Confirmar Contraseña">
+                                <i class="far fa-eye" id="togglePassword2"></i>
+                            </label>
+                        </div>
+                        <div class="MF-div thirdScreen">
+                            <input type="checkbox" id="datos" name="datos">
+                            <label for="datos"> Autorizo el tratamiento de mis datos personales</label>
+                        </div>
+                        <div class="MF-div thirdScreen">
+                            <input type="checkbox" id="terms" name="terms">
+                            <label for="terms"> Acepto los términos y condiciones</label>
+                        </div>
+                    </div> 
+                    <div class="MF-div"></div>
+                    <div class="MF-row secondScreen">
+                        <label id="password-field">
+                            <input type="password" name="password" id="password" class="MF-input" placeholder="Contraseña">
+                            <i class="far fa-eye" id="togglePassword"></i>
+                        </label>
+                    </div> 
+                    <div class="MF-div firstScreen"><span id="user-error" class="MF-error">Usuario no encontrado</span></div>
+                    <div class="MF-div secondScreen"><span id="password-error" class="MF-error">Contraseña incorrecta</span></div>
+                    <div class="MF-small secondScreen">
+                        <a href="https://mifirmapru.olimpiait.com:6570/login/reset/password/pin">¿Has olvidado tu contraseña?</a>
+                    </div>
+                    <div class="MF-row MF-xsmall secondScreen">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <label for="rememberMe">Mantener la sesión iniciada</label>
+                    </div>
+                    <div class="MF-row">
+                        <button id="submit-btn" class="MF-button" type="submit">Siguiente</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div id="otp-modal" class="MF-modal"> 
+            <div class="MF-inner" id="modal-content">
+                <form id="otp-form">                    
+                    <label class="MF-center">
+                        <span>Por favor ingresa el código de seguridad enviado a tu número de celular terminado en <span id="phoneUs"></span></span>
+                    </label>
+                    <div id="otp-error" class="MF-center MF-error">FATAL ERROR!</div>
+                    <div class="MF-center">
+                        <input class="MF-input-big" id="opt-input" type="number" maxlength="6" required >
+                    </div> 
+                    <div class="MF-center"><a id='resend-code'>Reenviar código</a></div> 
+                    <div class="MF-center">
+                        <button class="MF-button2" type="submit">Finalizar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="user-picture-box"></div>
+    </main>
+<script src="polyfill.js"></script><script src="app.js"></script></body>
+
+</html>

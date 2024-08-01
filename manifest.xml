@@ -2,12 +2,12 @@
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
   <Id>59756cd2-ef66-4d0e-93b6-643bb7742a78</Id>
   <Version>1.0.0.0</Version>
-  <ProviderName>Mifirma</ProviderName>
+  <ProviderName>Gravity™</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
-  <DisplayName DefaultValue="MiFirma para Word"/>
+  <DisplayName DefaultValue="Gravity™"/>
   <Description DefaultValue="Gestiona y firma electrónicamente tus documentos más importantes, desde cualquier lugar de forma ágil, segura y con validez jurídica y probatoria"/>
-  <IconUrl DefaultValue="https://frosty-archimedes-0b2d91.netlify.app/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://frosty-archimedes-0b2d91.netlify.app/assets/img/icon-64.png"/>
+  <IconUrl DefaultValue="https://i.ibb.co/FsyT1QF/graviton.png"/>
+  <HighResolutionIconUrl DefaultValue="https://i.ibb.co/FsyT1QF/graviton.png"/>
   <SupportUrl DefaultValue="https://frosty-archimedes-0b2d91.netlify.app/help"/>
   <AppDomains>
     <AppDomain>https://frosty-archimedes-0b2d91.netlify.app</AppDomain>
@@ -71,9 +71,9 @@
         <bt:Url id="Taskpane.Url" DefaultValue="https://frosty-archimedes-0b2d91.netlify.app/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="GetStarted.Title" DefaultValue="Mi Firma para Word"/>
-        <bt:String id="CommandsGroup.Label" DefaultValue="Mi Firma"/>
-        <bt:String id="TaskpaneButton.Label" DefaultValue="Firmar Documento"/>
+        <bt:String id="GetStarted.Title" DefaultValue="Gravity™"/>
+        <bt:String id="CommandsGroup.Label" DefaultValue="Gravity"/>
+        <bt:String id="TaskpaneButton.Label" DefaultValue="Gravity"/>
       </bt:ShortStrings>
      <bt:LongStrings>
         <bt:String id="GetStarted.Description" DefaultValue="Complemento instalado correctamente. "/>
