@@ -8,7 +8,7 @@
     "dev-server-port": 3000
   },
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "npm i",
     "build:dev": "webpack --mode development",
     "configure-sso": "office-addin-sso configure manifest.xml",
     "lint": "office-addin-lint check",
