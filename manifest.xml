@@ -7,7 +7,7 @@
   <DisplayName DefaultValue="Gravity™"/>
   <Description DefaultValue="Cloud Based Financial Close Management Solution"/>
   <IconUrl DefaultValue="https://frosty-archimedes-0b2d91.netlify.app/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://frosty-archimedes-0b2d91.netlify.app/assets/img/icon-64.png"/>
+  <HighResolutionIconUrl DefaultValue="https://frosty-archimedes-0b2d91.netlify.app/assets/icon-64.png"/>
   <SupportUrl DefaultValue="https://frosty-archimedes-0b2d91.netlify.app/help"/>
   <AppDomains>
     <AppDomain>https://frosty-archimedes-0b2d91.netlify.app</AppDomain>
