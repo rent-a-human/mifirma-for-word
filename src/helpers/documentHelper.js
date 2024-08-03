@@ -176,7 +176,7 @@ function writeDataToWord(result) {
 
 export async function openMiFirma() {
   return Word.run(async context => {
-    Office.context.ui.displayDialogAsync("https://frosty-archimedes-0b2d91.netlify.app/app.html", { width:30, height:75 });   
+    Office.context.ui.displayDialogAsync("https://localhost:8080/app.html", { width:30, height:75 });   
 
    //  if (localStorage.getItem("word-document1") === null) {
       var documentName = "empty";

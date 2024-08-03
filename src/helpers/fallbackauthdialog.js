@@ -35,7 +35,7 @@ const msalConfig = {
   auth: {
     clientId: "83fae392-2ceb-4671-aab2-3bcacbf967ef", //This is your client ID
     authority: "https://login.microsoftonline.com/common",
-    redirectUri: "https://frosty-archimedes-0b2d91.netlify.app/fallbackauthdialog.html",
+    redirectUri: "https://localhost:8080/fallbackauthdialog.html",
     navigateToLoginRequestUrl: false
   },
   cache: {
