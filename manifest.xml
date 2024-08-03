@@ -63,7 +63,7 @@
       <bt:Images>
         <bt:Image id="Icon.16x16" DefaultValue="https://frosty-archimedes-0b2d91.netlify.app/assets/icon-16.png"/>
         <bt:Image id="Icon.32x32" DefaultValue="https://frosty-archimedes-0b2d91.netlify.app/assets/icon-32.png"/>
-        <bt:Image id="Icon.80x80" DefaultValue="https://frosty-archimedes-0b2d91.netlify.app/assets/icon-80_1.png"/>
+        <bt:Image id="Icon.80x80" DefaultValue="https://frosty-archimedes-0b2d91.netlify.app/assets/icon-80_3.png"/>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="GetStarted.LearnMoreUrl" DefaultValue="https://go.microsoft.com/fwlink/?LinkId=276812"/>
