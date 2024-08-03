@@ -1029,7 +1029,7 @@ function requestOTP(authId, PIN) {
                 });
                 //alert(', su usuario ha sido bloqueado por medidas de seguridad');
                 sessionService.logout();
-                window.location.href = 'https://localhost:8080'
+                window.location.href = 'https://frosty-archimedes-0b2d91.netlify.app'
             } else if (res.statusCode == 505) {
                 new attention.Alert({
                     title: 'No pudimos validar el código OTP',
@@ -1749,27 +1749,27 @@ function logOut() {
 }
 
 function openPersonalFolder() {
-    window.location = ('https://localhost:8080/main/repositorio');
+    window.location = ('https://frosty-archimedes-0b2d91.netlify.app/main/repositorio');
 }
 
 function openEditSignature() {
-    window.location = ('https://localhost:8080/main/miFirma');
+    window.location = ('https://frosty-archimedes-0b2d91.netlify.app/main/miFirma');
 }
 
 function openTerms() {
-    window.location ='https://localhost:8080/main/terminos/terminos-condiciones';
+    window.location ='https://frosty-archimedes-0b2d91.netlify.app/main/terminos/terminos-condiciones';
 }
 
 function openPolicy() {
-    window.location = 'https://localhost:8080/main/terminos/tratamiento-datos';
+    window.location = 'https://frosty-archimedes-0b2d91.netlify.app/main/terminos/tratamiento-datos';
 }
 
 function openConfig() {
-    window.location = 'https://localhost:8080/main/configuracion'
+    window.location = 'https://frosty-archimedes-0b2d91.netlify.app/main/configuracion'
 }
 
 function openProfile() {
-    window.location = 'https://localhost:8080/main/perfil';
+    window.location = 'https://frosty-archimedes-0b2d91.netlify.app/main/perfil';
 }
 
 // ************************ Drag and drop ***************** //
