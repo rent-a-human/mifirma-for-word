@@ -162,12 +162,12 @@
   }
 
   .MF-highlight {
-      color: #9E267C;
+      color: #b64ef9;
       font-weight: bold;
   }
 
   .MF-button {
-      background-color: #9E267C;
+      background-color: #b64ef9;
       border-radius: 5px;
       color: white;
       text-align: center;
@@ -214,7 +214,7 @@
 .MF-ribbon {
     height: 20px;
     background-color: purple; /* For browsers that do not support gradients */
-    background-image: linear-gradient(to right,#6b2958, #ff00b7, #9E267C);
+    background-image: linear-gradient(to right,#6b2958, #ff00b7, #b64ef9);
     padding: 0px;
     margin: 0;
 
@@ -279,7 +279,7 @@
     padding-top: 10px;
     right: 120px;
     margin:0 auto;
-    background-color: #9E267C;
+    background-color: #b64ef9;
     border-radius: 5px;
     color: white;
     text-align: center;
